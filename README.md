@@ -32,6 +32,95 @@ Pick your preferred tool to get started:
 
 Visit [Microsoft 365 Agents Toolkit documentation](https://aka.ms/teamsfx-docs) to get started with building agents and apps.
 
+## Working with This Repository
+
+This repository is a monorepo containing the source code for all Microsoft 365 Agents Toolkit tools and packages. Here's what you can do:
+
+### Setup Development Environment
+
+**Prerequisites:**
+- Node.js >= 22
+- pnpm >= 8
+
+**Quick Start:**
+```bash
+# Clone the repository
+git clone https://github.com/OfficeDev/TeamsFx.git
+cd TeamsFx
+
+# Install dependencies and build all packages
+pnpm run setup
+
+# Or build specific packages:
+pnpm run setup:cli    # Build CLI only
+pnpm run setup:vsc    # Build VS Code extension only
+pnpm run setup:e2e    # Build for E2E testing
+```
+
+### Available Commands
+
+- **`pnpm run build`** - Build all packages in the monorepo
+- **`pnpm run watch`** - Watch for changes and rebuild automatically
+- **`pnpm run clean`** - Remove all node_modules directories
+- **`pnpm run setup`** - Install dependencies and build everything
+
+### Explore the Packages
+
+The repository contains several packages that work together to provide the Microsoft 365 Agents Toolkit experience:
+
+**Core Development Tools:**
+- **[vscode-extension](packages/vscode-extension)** - Teams Toolkit for Visual Studio Code with IDE integration
+- **[cli](packages/cli)** - Command-line interface with all toolkit features
+- **[fx-core](packages/fx-core)** - Shared implementation used by IDE extensions and CLI
+
+**SDKs and Libraries:**
+- **[sdk](packages/sdk)** - Authentication and client/server libraries for Teams developers
+- **[sdk-react](packages/sdk-react)** - React components and hooks for Teams apps
+- **[dotnet-sdk](packages/dotnet-sdk)** - .NET SDK for Teams development
+
+**Supporting Packages:**
+- **[api](packages/api)** - Extensibility contracts for writing toolkit plugins
+- **[function-extension](packages/function-extension)** - Azure Functions integration with authentication
+- **[spec-parser](packages/spec-parser)** - OpenAPI parser for generating message extensions
+- **[manifest](packages/manifest)** - Teams app manifest utilities
+- **[mcp-server](packages/mcp-server)** - Model Context Protocol server implementation
+
+**Developer Tools:**
+- **[adaptivecards-tools-sdk](packages/adaptivecards-tools-sdk)** - Tools for working with Adaptive Cards
+- **[eslint-plugin-teamsfx](packages/eslint-plugin-teamsfx)** - ESLint rules for Teams development
+- **[simpleauth](packages/simpleauth)** - Simple authentication service
+
+### Work with Templates
+
+The `templates/` directory contains scaffolding templates for:
+- Microsoft Teams applications
+- Microsoft 365 Copilot plugins
+- Declarative agents
+- Custom copilots with RAG and AI
+- Message extensions
+- Tabs and bots
+
+Templates are available for both Visual Studio (`templates/vs/`) and Visual Studio Code (`templates/vsc/`).
+
+### Contributing
+
+We welcome contributions! Here's how to get started:
+
+1. **Choose your area** - Select a package you want to contribute to from the list above
+2. **Read package-specific guidelines** - Each package has its own `CONTRIBUTING.md` with specific instructions
+3. **Make your changes** - Follow our [contribution guidelines](CONTRIBUTING.md)
+4. **Submit a PR** - Create a pull request with your improvements
+
+See our main [Contributing Guide](CONTRIBUTING.md) for detailed instructions and links to package-specific guidelines.
+
+### Testing Your Changes
+
+Each package typically includes its own test suite. Refer to individual package README files for testing instructions.
+
+### Download Daily Builds
+
+Want to try the latest features? Download our [daily builds](https://github.com/OfficeDev/TeamsFx/releases) to test cutting-edge functionality.
+
 ## Roadmap
 
 Microsoft 365 Agents Toolkit for Visual Studio, Visual Studio Code, and Command Line Interface (CLI) will be updated regularly with new features and bug fixes to continuously improve end-to-end Teams development experience. Visit our [Changelog](https://github.com/OfficeDev/teams-toolkit/blob/dev/packages/vscode-extension/CHANGELOG.md) and [Prerelease Changelog](https://github.com/OfficeDev/teams-toolkit/blob/dev/packages/vscode-extension/PRERELEASE.md) to see what's available for you now and see [product roadmap](https://aka.ms/teamsfx-roadmap) to find out what's coming.
