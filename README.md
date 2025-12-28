@@ -107,7 +107,7 @@ Templates are available for both Visual Studio (`templates/vs/`) and Visual Stud
 We welcome contributions! Here's how to get started:
 
 1. **Choose your area** - Select a package you want to contribute to from the list above
-2. **Read package-specific guidelines** - Each package has its own `CONTRIBUTING.md` with specific instructions
+2. **Read package-specific guidelines** - Many packages have their own `CONTRIBUTING.md` with specific instructions
 3. **Make your changes** - Follow our [contribution guidelines](CONTRIBUTING.md)
 4. **Submit a PR** - Create a pull request with your improvements
 
